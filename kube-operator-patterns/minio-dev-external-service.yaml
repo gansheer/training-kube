@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: minio-dev-service
+  namespace: gansheer
+spec:
+  type: ExternalName
+  externalName: minio-dev-service.minio-dev.svc.cluster.local
+  ports:
+  - port: 9090

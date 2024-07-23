@@ -1,0 +1,31 @@
+# permissions for end users to edit objstores.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: objstore-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: cninf
+    app.kubernetes.io/part-of: cninf
+    app.kubernetes.io/managed-by: kustomize
+  name: objstore-editor-role
+rules:
+- apiGroups:
+  - cninf.training.gansheer.fr
+  resources:
+  - objstores
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cninf.training.gansheer.fr
+  resources:
+  - objstores/status
+  verbs:
+  - get

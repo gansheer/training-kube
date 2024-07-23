@@ -1,0 +1,13 @@
+apiVersion: cninf.training.gansheer.fr/v1alpha1
+kind: ObjStore
+metadata:
+  labels:
+    app.kubernetes.io/name: objstore
+    app.kubernetes.io/instance: gansheer-02
+    app.kubernetes.io/part-of: cninf
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: cninf
+  name: gansheer-02
+spec:
+  name: gansheerlive-extk8s-02
+  locked: false
